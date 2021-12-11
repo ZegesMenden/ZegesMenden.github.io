@@ -21,42 +21,38 @@ button {
     padding-top: 0.2vh;
     padding-bottom: 0.2vh;
     margin-left: 2vw;
+    margin-top: 2vw;
     width: fit-content;
 }
 
 .type-out {
     margin-left: 2vw;
     margin-top: 2vh;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
     padding-top: 0.2vh;
     padding-bottom: 0.2vh;
     overflow: hidden;
     border-right: .15em solid lightskyblue;
     font-size: 300%;
     color:rgb(185, 185, 185);
-    width: 0;
-    white-space: nowrap;
+    width: 0vw;
+
     animation: 
-        typing 2s steps(34, end) forwards 0.85s,
+        typing 1s steps(12, end) forwards 0.85s,
         blink 0.8s infinite
 }
 
 .type-out-1 {
     margin-left: 2vw;
     margin-top: 2vh;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
     padding-top: 0.2vh;
     padding-bottom: 0.2vh;
     overflow: hidden;
     border-right: .15em solid lightskyblue;
     font-size: 300%;
     color:rgb(185, 185, 185);
-    width: 0;
-    white-space: nowrap;
+    width: 0vw;
     animation: 
-        typing 2s steps(9, end) forwards 0.85s,
+        typing 2s steps(21, end) forwards 0.85s,
         blink 0.8s infinite
 }
 
@@ -65,8 +61,8 @@ button {
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 93% }
+    from { width: 0% }
+    to { width: 95% }
 }
 
 @keyframes blink {
@@ -113,7 +109,6 @@ button {
 
 }
 
-
 .highlight-wen-hover:hover {
     animation:
         HL 0.3s forwards;
@@ -146,4 +141,44 @@ button {
         background-color: rgb(39, 39, 39); 
         color:rgb(185, 185, 185); 
     }
+}
+
+.home_button {
+
+    display:block;
+
+    color:rgb(185, 185, 185);
+    font-size: 250%;
+    
+    position:relative;
+
+    top: -8vh;
+    right: -90vw;
+    
+    width: fit-content;
+
+}
+
+.home_button:hover {
+    animation:
+        HL 0.3s forwards;
+}
+
+.home_button:not(:hover) {
+    animation:
+        HLb 0.3s backwards;
+}
+
+.txt {
+
+    display:block;
+
+    color:rgb(185, 185, 185);
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-top: 0.2vh;
+    padding-bottom: 0.2vh;
+    margin-left: 2vw;
+    width: fit-content;
+
 }
