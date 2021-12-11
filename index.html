@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+    <head>
+    
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="style.css">
+        
+        <title>sunglasses emoji</title>
+        
+    </head>
+
+    <body>
+        <script>
+            function goToGit() {
+
+                document.getElementById("lc").style.height = "95vh";
+                setTimeout(function() {
+                    document.getElementById("lc").style.animation = "hide 1s ease-in-out forwards";
+                }, 1);
+                
+                setTimeout(function() {
+                    window.open("https://github.com/ZegesMenden", "_parent");
+                }, 1750);
+
+            }
+
+            function goToProjects() {
+
+            document.getElementById("lc").style.height = "95vh";
+            setTimeout(function() {
+                document.getElementById("lc").style.animation = "hide 1s ease-in-out forwards";
+            }, 1);
+
+            setTimeout(function() {
+                window.open("projects.html", "_parent");
+            }, 1750);
+
+            }
+        </script>
+
+        <div class="line_container" id="lc">
+            <div class="container">
+                <div class="type-out">ZegesMenden - pro zeggyspeak dev.</div>
+            </div>
+            <button onclick="goToGit()" class="highlight-wen-hover">github page</button>
+            <button onclick="goToProjects()" class="highlight-wen-hover">projects</button>
+
+        </div>
+
+    </body>
+
+</html>

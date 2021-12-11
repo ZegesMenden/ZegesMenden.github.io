@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+    <head>
+    
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="style.css">
+        
+        <title>projects</title>
+        
+    </head>
+
+    <body>
+        <script>
+
+            function goToMain() {
+
+            document.getElementById("lc").style.height = "95vh";
+            setTimeout(function() {
+                document.getElementById("lc").style.animation = "hide 1s ease-in-out forwards";
+            }, 1);
+
+            setTimeout(function() {
+                window.open("index.html", "_parent");
+            }, 1750);
+
+            }
+
+        </script>
+
+        <div class="line_container" id="lc">
+            <div class="container">
+                <div class="type-out-1">Projects.</div>
+            </div>
+            <button type="button" onclick="goToMain()" class="highlight-wen-hover">home</button>
+            <p class="highlight-wen-hover">lol</p>
+        </div>
+
+    </body>
+
+</html>
