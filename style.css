@@ -37,7 +37,7 @@ button {
     width: 0vw;
 
     animation: 
-        typing 1s steps(12, end) forwards 0.85s,
+        typing 1s steps(13, end) forwards 0.85s,
         blink 0.8s infinite
 }
 
@@ -171,14 +171,15 @@ button {
 
 .txt {
 
-    display:block;
-
     color:rgb(185, 185, 185);
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     padding-top: 0.2vh;
     padding-bottom: 0.2vh;
     margin-left: 2vw;
-    width: fit-content;
+    margin-right: 2vw;
+    width: 96vw;
+    white-space:normal;
+    /* width: fit-content; */
 
 }
