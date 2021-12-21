@@ -80,7 +80,7 @@ button {
     height: 0;
     white-space: nowrap;
     animation: 
-        show 1.5s ease-in-out forwards 0.5s;
+        show 0.8s ease-in-out forwards 0.5s;
     
 }
 
