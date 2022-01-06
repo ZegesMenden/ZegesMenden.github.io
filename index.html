@@ -28,24 +28,38 @@
 
             function goToProjects() {
 
-            document.getElementById("lc").style.height = "95vh";
-            setTimeout(function() {
-                document.getElementById("lc").style.animation = "hide 0.8s ease-in-out forwards";
-            }, 1);
+                document.getElementById("lc").style.height = "95vh";
+                setTimeout(function() {
+                    document.getElementById("lc").style.animation = "hide 0.8s ease-in-out forwards";
+                }, 1);
 
-            setTimeout(function() {
-                window.open("projects.html", "_parent");
-            }, 800);
+                setTimeout(function() {
+                    window.open("projects.html", "_parent");
+                }, 800);
+
+            }
+
+            function toToAboutMe() {
+
+                document.getElementById("lc").style.height = "95vh";
+                setTimeout(function() {
+                    document.getElementById("lc").style.animation = "hide 0.8s ease-in-out forwards";
+                }, 1);
+
+                setTimeout(function() {
+                    window.open("about.html", "_parent");
+                }, 800);
 
             }
         </script>
 
         <div class="line_container" id="lc">
             <div class="container">
-                <div class="type-out">ZegesMenden/</div>
+                <div class="type-out">ZegesMenden/ </div>
             </div>
-            <button onclick="goToGit()" class="highlight-wen-hover">github page</button>
-            <button onclick="goToProjects()" class="highlight-wen-hover">projects</button>
+            <button onclick="goToGit()">github page</button>
+            <button onclick="toToAboutMe()">about</button>
+            <button onclick="goToProjects()">projects</button>
 
         </div>
 

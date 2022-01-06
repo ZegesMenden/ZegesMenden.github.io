@@ -23,6 +23,7 @@ button {
     margin-left: 2vw;
     margin-top: 2vw;
     width: fit-content;
+    transition: 0.3s;
 }
 
 .type-out {
@@ -94,53 +95,9 @@ button {
     to { height: 0; }
 }
 
-.highlight-wen-hover {
-
-    display:block;
-
-    color:rgb(185, 185, 185);
-    font-size: 250%;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    padding-top: 0.2vh;
-    padding-bottom: 0.2vh;
-    margin-left: 2vw;
-    width: fit-content;
-
-}
-
-.highlight-wen-hover:hover {
-    animation:
-        HL 0.3s forwards;
-}
-
-.highlight-wen-hover:not(:hover) {
-    animation:
-        HLb 0.3s backwards;
-}
-
-@keyframes HL {
-    from{ 
-        background-color: rgb(39, 39, 39); 
-        color:rgb(185, 185, 185); 
-    }
-
-    to{ 
-        background-color: lightskyblue; 
-        color:rgb(39, 39, 39); 
-    }
-}
-
-@keyframes HLb {
-    from{ 
-        background-color: lightskyblue; 
-        color:rgb(39, 39, 39); 
-    }
-
-    to{ 
-        background-color: rgb(39, 39, 39); 
-        color:rgb(185, 185, 185); 
-    }
+button:hover {
+    color:rgb(39, 39, 39);
+    background-color: lightskyblue;
 }
 
 .home_button {
@@ -148,25 +105,36 @@ button {
     display:block;
 
     color:rgb(185, 185, 185);
-    font-size: 250%;
+    font-size: 2.5vw;
     
-    position:relative;
+    position:absolute;
 
-    top: -8vh;
-    right: -90vw;
+    top: 0vh;
+    right: 2vw;
     
     width: fit-content;
 
+    opacity: 1;
+    transition-duration: 0.3s;
+    transition: 0.3s;
+    transition-property: all;
+    
+    animation: 
+        show_button ease-in-out forwards 1.5s;
+
 }
 
-.home_button:hover {
-    animation:
-        HL 0.3s forwards;
-}
-
-.home_button:not(:hover) {
-    animation:
-        HLb 0.3s backwards;
+@keyframes show_button {
+    0%{ 
+        opacity: 0;
+        /* color: transparent; */
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .txt {
