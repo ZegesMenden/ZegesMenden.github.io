@@ -3,11 +3,13 @@
   
     <head>
     
+        <link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
+
         <meta charset="utf-8">
 
         <link rel="stylesheet" href="style.css">
         
-        <title>main</title>
+        <title>ZegesMenden</title>
         
     </head>
 
@@ -51,11 +53,15 @@
                 }, 800);
 
             }
+
+            window.onload = function WindowLoad(event) {
+                document.getElementById("type-out").style.animation = "typing 0.95s steps(13, end) forwards 0.85s, blink 0.8s infinite";
+            }
         </script>
 
         <div class="line_container" id="lc">
             <div class="container">
-                <div class="type-out">ZegesMenden/ </div>
+                <div class="type-out", id="type-out">ZegesMenden/ </div>
             </div>
             <button onclick="goToGit()">github page</button>
             <button onclick="toToAboutMe()">about</button>

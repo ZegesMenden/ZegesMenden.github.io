@@ -38,22 +38,7 @@ button {
     width: 0vw;
 
     animation: 
-        typing 1s steps(13, end) forwards 0.85s,
-        blink 0.8s infinite
-}
-
-.type-out-1 {
-    margin-left: 2vw;
-    margin-top: 2vh;
-    padding-top: 0.2vh;
-    padding-bottom: 0.2vh;
-    overflow: hidden;
-    border-right: .15em solid lightskyblue;
-    font-size: 300%;
-    color:rgb(185, 185, 185);
-    width: 0vw;
-    animation: 
-        typing 2s steps(21, end) forwards 0.85s,
+        typing 1s steps(10, end) forwards 0.85s,
         blink 0.8s infinite
 }
 
