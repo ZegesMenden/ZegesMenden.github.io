@@ -3,7 +3,7 @@
   
     <head>
     
-        <link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" />
 
         <meta charset="utf-8">
 
@@ -18,23 +18,22 @@
 
             function goToMain() {
 
-                document.getElementById("lc").style.height = "95vh";
+                document.getElementById("lc").style.height = "0vh";
 
                 document.getElementById("home").style.color = "transparent";
                 document.getElementById("home").style.backgroundColor = "transparent";
 
                 setTimeout(function() {
-                    document.getElementById("lc").style.animation = "hide 0.8s ease-in-out forwards";
-                }, 1);
-
-                setTimeout(function() {
                     window.open("index.html", "_parent");
-                }, 800);
+                }, 1750);
 
             }
 
             window.onload = function WindowLoad(event) {
                 document.getElementById("type-out").style.animation = "typing 2.5s steps(22, end) forwards 0.85s, blink 0.8s infinite";
+                document.getElementById("lc").style.transitionDelay = "0.25s";
+                document.getElementById("lc").style.transitionDuration = "1s";
+                document.getElementById("lc").style.height = "95vh";        
             }
 
         </script>

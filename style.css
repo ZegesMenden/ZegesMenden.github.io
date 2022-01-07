@@ -65,19 +65,7 @@ button {
     border-bottom: .15em solid lightskyblue;
     height: 0;
     white-space: nowrap;
-    animation: 
-        show 0.8s ease-in-out forwards 0.5s;
-    
-}
 
-@keyframes show {
-    from { height: 0; }
-    to { height: 95vh; }
-}
-
-@keyframes hide {
-    from { height: 95vh; }
-    to { height: 0; }
 }
 
 button:hover {
@@ -134,5 +122,20 @@ button:hover {
     width: 96vw;
     white-space:normal;
     /* width: fit-content; */
+
+}
+
+.img {
+
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+
+    width: 35vw;
+    height: auto;
+
+    /* border-bottom-left-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw; */
 
 }
