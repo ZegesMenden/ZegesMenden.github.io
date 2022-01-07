@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  
-    <head>
-    
-        <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" />
 
-        <meta charset="utf-8">
+<head>
 
-        <link rel="stylesheet" href="style.css">
-        
-        <title>ZegesMenden</title>
-        
-    </head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" />
 
-    <body>
-        <script>
-            function goToGit() {
+    <meta charset="utf-8">
 
-                document.getElementById("lc").style.height = "0vh";
-                
-                setTimeout(function() {
-                    window.open("https://github.com/ZegesMenden", "_parent");
-                }, 1750);
+    <link rel="stylesheet" href="style.css">
 
-            }
+    <title>ZegesMenden</title>
 
-            function goToProjects() {
+</head>
 
-                document.getElementById("lc").style.height = "0vh";
+<body>
+    <script>
 
-                setTimeout(function() {
-                    window.open("projects.html", "_parent");
-                }, 1750);
+        function goToGit() {
 
-            }
+            document.getElementById("lc").style.height = "0vh";
 
-            function toToAboutMe() {
+            setTimeout(function () { window.open("https://github.com/ZegesMenden", "_parent"); }, 1750);
 
-                document.getElementById("lc").style.height = "0vh";
+        }
 
-                setTimeout(function() {
-                    window.open("about.html", "_parent");
-                }, 1750);
+        function goToProjects() {
 
-            }
+            document.getElementById("lc").style.height = "0vh";
 
-            window.onload = function WindowLoad(event) {
-                document.getElementById("type-out").style.animation = "typing 0.95s steps(13, end) forwards 0.85s, blink 0.8s infinite";
-                document.getElementById("lc").style.transitionDelay = "0.25s";
-                document.getElementById("lc").style.transitionDuration = "1s";
-                document.getElementById("lc").style.height = "95vh";    
-            }
+            setTimeout(function () { window.open("projects.html", "_parent"); }, 1750);
 
-        </script>
+        }
 
-        <div class="line_container" id="lc">
-            <div class="container">
-                <div class="type-out", id="type-out">ZegesMenden/ </div>
-            </div>
-            <button onclick="goToGit()">github page</button>
-            <button onclick="toToAboutMe()">about</button>
-            <button onclick="goToProjects()">projects</button>
+        function toToAboutMe() {
 
+            document.getElementById("lc").style.height = "0vh";
+
+            setTimeout(function () { window.open("about.html", "_parent"); }, 1750);
+
+        }
+
+        window.onload = function WindowLoad(event) {
+
+            document.getElementById("type-out").style.animation = "typing 1.3s steps(13, end) forwards 0.85s, blink 0.8s infinite";
+
+            document.getElementById("lc").style.transitionDelay = "0.25s";
+            document.getElementById("lc").style.transitionDuration = "1s";
+            document.getElementById("lc").style.height = "95vh";
+
+        }
+
+    </script>
+
+    <div class="line_container" id="lc">
+        <div class="container">
+            <div class="type-out" , id="type-out">ZegesMenden/ </div>
         </div>
+        <button onclick="goToGit()">Github page</button>
+        <button onclick="toToAboutMe()">A bout</button>
+        <button onclick="goToProjects()">Projects</button>
 
-    </body>
+    </div>
+
+</body>
 
 </html>
