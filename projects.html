@@ -30,18 +30,18 @@
 
         }
 
-        window.onload = function WindowLoad(event) {
+        window.onload = () => {
 
             document.getElementById("type-out").style.animation = "typing 2.2s steps(22, end) forwards 0.85s, blink 0.8s infinite";
 
             document.getElementById("lc").style.transitionDuration = "1.5s";
-            document.getElementById("lc").style.height = "230vh";
+            document.getElementById("lc").style.height = "370vh";
 
             setTimeout(function () { document.getElementById("home").style.opacity = "1"; }, 800);
 
         }
 
-        window.onscroll = function WindowScroll(event) {
+        window.onscroll = () => {
             if ( document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 ) {
                 document.getElementById("btn").style.opacity = "1";
             } else {
@@ -87,6 +87,24 @@
 
         <p class="txt" style="font-size: 2vw">Local Launcher lifting off the pad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local Launcher on a recent flight</p>
 
+        <hr style="width:95vw;text-align:center">
+
+        <p class="txt" style="font-size: 3vw; margin-bottom: 1vh; padding-bottom: 1vh;">Next steps. </p>
+        <p class="txt" style="font-size: 2vw; margin-top: 0%; padding-top: 0%;">Now that my original goal of stabilizing a rocket with thrust vectoring has been achieved, I have set my sights on larger goals including active aerodynamic control and propulsive landing.</p>
+
+        <img src="images/europa_closeup.jpg" alt="test" class="img">
+        <img src="images/europa_sim.png" alt="test" class="img">
+
+        <p class="txt" style="font-size: 2vw">My newest flight computer, Europa R1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;early propulsive landing simulations</p>
+
+        <hr style="width:95vw;text-align:center">
+        
+        <img src="images/europa.png" alt="test" class="img">
+        <img src="images/LR1-roll-damping.gif" alt="test" class="img">
+
+        <p class="txt" style="font-size: 2vw;">Europa R1 design schematic in KiCad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;callisto actively controlling roll</p>
+        <!-- <p class="txt" style="font-size: 2vw;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during a test flight</p> -->
+        <!-- <p class="txt" style="font-size: 2vw; text-align: center;">during a test flight</p> -->
 
         <!-- <hr style="width:95vw;text-align:center"> -->
 
