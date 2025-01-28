@@ -1,67 +1,144 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-
-    <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" />
-
-    <meta charset="utf-8">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.ico">
     <link rel="stylesheet" href="style.css">
-
     <title>ZegesMenden</title>
-
 </head>
-
 <body>
-    <script>
 
-        function goToGit() {
+    <!-- Video Header -->
+    <img src="img/lr1-launch-crop.gif" id="videoHeader">
+    
+    <!-- Header Content -->
+    <div id="header">
+        <h1 id="displayText0"></h1> 
+        <p id="displayText1"></p>
+    </div>
+    
+    <!-- About Me Section -->
+    <div id="about-me" style="display: flex; justify-content: space-between; padding: 1vw; padding-bottom: 0vw;">
 
-            document.getElementById("lc").style.height = "0vh";
-
-            setTimeout(function () { window.open("https://github.com/ZegesMenden", "_parent"); }, 1750);
-
-        }
-
-        function goToProjects() {
-
-            document.getElementById("lc").style.height = "0vh";
-
-            setTimeout(function () { window.open("projects.html", "_parent"); }, 1750);
-
-        }
-
-        function toToAboutMe() {
-
-            document.getElementById("lc").style.height = "0vh";
-
-            setTimeout(function () { window.open("about.html", "_parent"); }, 1750);
-
-        }
-
-        window.onload = function WindowLoad(event) {
-
-            document.getElementById("type-out").style.animation = "typing 1.3s steps(13, end) forwards 0.85s, blink 0.8s infinite";
-
-            document.getElementById("lc").style.transitionDelay = "0.25s";
-            document.getElementById("lc").style.transitionDuration = "1s";
-            document.getElementById("lc").style.height = "95vh";
-
-        }
-
-    </script>
-
-    <div class="line_container" id="lc">
-        <div class="container">
-            <div class="type-out" , id="type-out">ZegesMenden/ </div>
+        <div style="padding: 2vw; padding-top: 1vh; width: 65vw; border-radius: 1vw; background-color: rgb(40, 40, 40);">
+            <h1>About Me</h1>
+            <p>Hi, I'm Cameron! I currently studying computer engineering at the University of Massachusetts Amherst. I am interested in amateur rocketry, embedded systems, and computer science!</p>
         </div>
-        <button onclick="goToGit()">Github page</button>
-        <button onclick="toToAboutMe()">About</button>
-        <button onclick="goToProjects()">Projects</button>
+
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2vw; width: 22vw;  border-radius: 1vw; background-color: rgb(40, 40, 40);">
+            <a href="https://www.linkedin.com/in/cameron-kullberg-98436821a/" target="_blank" style="margin-bottom: 1vw;" class="profileLink">
+                <h1 style="padding: 0%; margin: 1vw;">Linkedin</h1>
+            </a>
+            <a href="https://github.com/ZegesMenden" target="_blank" style="margin-bottom: 1vw;" class="profileLink">
+                <h1 style="padding: 0%; margin: 1vw;">GitHub</h1>
+            </a>
+        </div>
 
     </div>
 
-</body>
+    <!-- Projects Section -->
+    <div id="projects" style="padding-top: 0vw">
+        <h1 style="padding: 0; font-size: 3vw;">Projects</h1>
+        <div class="project">
+            <div style="display: flex; align-items: left;">
+                <div style="display: flex; flex-direction: column; width: 42vw; text-align: left;">
+                    <h2>Thrust vector control for model rockets.</h2>
+                    <p>Since December 2020, I have been designing and building Thrust Vector Control (TVC) systems for model rockets. The rockets estimate their position, velocity, and orientation with a combination of orientation filters and kalman filters that fuse GPS, Gyro, Accelerometer, and Magnetometer sensors to minimize error and account for sensor bias in flight. The rockets are stabilized with a custom TVC mount and use full state feedback in combination with algorithms to calculate and compensate for mechanical misalignment in flight.</p>
+                </div>
 
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
+                    <div>
+                        <img src="img/callisto-launch.gif" style="width: 100%; height: auto; border-radius: 1vw;">
+                        <h2 style="margin: 0; padding: 0%; font-size: larger;">Orientation control demonstration flight</h2>  
+                    </div>
+                    <div>
+                        <img src="img/europa_closeup.JPG" style="width: 100%; height: auto; border-radius: 1vw;">
+                        <h2 style="margin: 0; padding: 0%; font-size: larger;">A close-up of the Europa flight computer</h2>  
+                    </div>
+                    <div>
+                        <img src="img/avionics_wireframe_crop.PNG" style="width: 100%; height: auto; border-radius: 1vw;">
+                        <h2 style="margin: 0; padding: 0%; font-size: larger;">Avionics and control stack rendering</h2>  
+                    </div>
+                    <div>
+                        <img src="img/europa-launch.gif" style="width: 100%; height: auto; border-radius: 1vw;">
+                        <h2 style="margin: 0; padding: 0%; font-size: larger;">Position control demonstration flight</h2>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div style="display: flex; align-items: left;">
+                <div style="display: flex; flex-direction: column; width: 42vw; text-align: left;">
+                    <h2>Rocket simulation and control software</h2>
+                    <p>In order to test and fly my rockets, I needed to simulate them! I wrote several iterations of rocket simulation software, origionally only simulating 2 axes but then moving on to full 6DOF simulation. The simulation accounts for aerodynamic effects from the rocket as well as any fins or drag breaks that can be deployed during flight. This simulation was eventually able to match real-world flights enough to be used for development of new control algorithms to improve the performance of my rockets. With these powerful simulation tools, I was able to create my own landing burn guidance algorithm called G-FIELD (Guidance for Fixed Impulse Efficient Landing Diverts) that I am currently working on implementing on a physical rocket!</p>
+                </div>
+                <div style="display: table-column; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
+                    <div>
+                        <img src="img/landing_sim_clip.gif" style="width: 90%; border-radius: 1vw;">
+                        <h2 style="margin: 0; padding: 0%; font-size: larger;">3D Rendering of a landing simulation</h2>  
+                    </div>
+                                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div style="display: flex; align-items: left;">
+                <div style="display: flex; flex-direction: column; width: 42vw; text-align: left;">
+                    <h2>Active canard control on high power rockets</h2>
+                    <p>Over the course of about ten months back in 2022, I designed an actively stabilized high power rocket with some friends named Local Rocket 1. This rocket flew on an H or I impulse rocket motor to around 1,000 feet and had active roll control from a pair of canards at the front of the vehicle. I was responsible for designing, building, testing, and programming the avionics system including Navigation, parachute deployment, and aiding in the control systems development. I designed a custom flight computer named Callisto to fly the rocket and developed a custom Real-time operating system to manage the computer's resources. The rocket used an asynchronous kalman filter to determine its position and velocity and was able to provide accurate velocity estimates even in the event of GPS signal loss.</p>
+                </div>
+                <div style="display: table-column; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
+                        <div>
+                            <img src="img/LR1LaunchPad.gif" style="width: 100%; height: auto; border-radius: 1vw;">
+                            <h2 style="margin: 0; padding: 0%; font-size: larger;">Footage of LR1 takeoff</h2>  
+                        </div>
+                        <div>
+                            <img src="img/LR1-launch-pad.JPG" style="width: 100%; height: auto; border-radius: 1vw;">
+                            <h2 style="margin: 0; padding: 0%; font-size: larger;">LR1 on the launchpad for its second flight</h2>  
+                        </div>
+                        <div>
+                            <img src="img/LR1Avionics.JPG" style="width: 100%; height: auto; border-radius: 1vw;">
+                            <h2 style="margin: 0; padding: 0%; font-size: larger;">LR1 avionics stack before integration</h2>  
+                        </div>
+                        <div>
+                            <img src="img/LR1OnBoard.gif" style="width: 100%; height: auto; border-radius: 1vw;">
+                            <h2 style="margin: 0; padding: 0%; font-size: larger;">Onboard footage of roll damping in flight</h2>  
+                        </div>
+                    </div>
+                                    
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div style="display: flex; align-items: left;">
+                <div style="display: flex; flex-direction: column; width: 42vw; text-align: left;">
+                    <h2>PCB Design</h2>
+                    <p>I have designed six iterations of rocket flight computers on PCBs over the past four years, and have progressed from using simple breakout boards to fully custom surface mount PCBs. Since designing flight computers for my rockets I have made several PCBs for various clubs at my university, including a flight computer for the UMASS Rocket team. I am currently designing power management and distribution boards for satellites in the UMASS CubeSat team.</p>
+                </div>
+                <div style="display: table-column; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
+                        <div>
+                            <img src="img/hyperion-stack.png" style="width: 100%; height: auto; border-radius: 1vw;">
+                            <h2 style="margin: 0; padding: 0%; font-size: larger;">Rendering of the Hyperion avionics system</h2>  
+                        </div>
+                        <div>
+                            <img src="img/MUFFY.jpg" style="width: 100%; height: auto; border-radius: 1vw;">
+                            <h2 style="margin: 0; padding: 0%; font-size: larger;">UMASS Rocket Team flight computer</h2>  
+                        </div>
+                    </div>
+                                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="generated/script.js"></script>
+</body>
 </html>
+
