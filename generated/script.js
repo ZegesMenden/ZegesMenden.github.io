@@ -44,5 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
         container.style.display = 'none';
     });
     updateText("Cameron Kullberg", 'displayText0', 120);
-    updateText("Computer Engineering student at UMASS Amherst, amateur rocketry enthusaist, embedded Systems engineer at CustomLitt.", 'displayText1', 50);
+    updateText("Embedded Systems Engineer at CustomLitt, Sophmore Computer Engineering major at UMASS Amherst, Amateur Rocketry Enthusaist.", 'displayText1', 50);
 });
