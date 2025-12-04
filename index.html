@@ -23,7 +23,7 @@
 
         <div style="padding: 2vw; padding-top: 1vh; width: 65vw; border-radius: 1vw; background-color: rgb(40, 40, 40);">
             <h1>About Me</h1>
-            <p>Hi, I'm Cameron! I'm a sophmore computer engineering major at the University of Massachusetts Amherst, and currently work at Custom Litt as an embedded systems engineer. I'm interested in amateur rocketry, embedded systems, and computer science!</p>
+            <p>Hi, I'm Cameron! I'm a junior computer engineering major at the University of Massachusetts Amherst, and currently work at Custom Litt as an embedded systems engineer. I'm interested in amateur rocketry, embedded systems, and computer science!</p>
         </div>
 
         <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2vw; width: 22vw;  border-radius: 1vw; background-color: rgb(40, 40, 40);">
@@ -37,116 +37,180 @@
 
     </div>
 
-    <!-- Projects Section -->
-    <div id="projects" style="padding-top: 0vw">
-        <h1 style="padding: 0; font-size: 3vw;">Projects</h1>
-        <div class="project">
-            <div style="display: flex; align-items: left;">
-                <div style="display: flex; flex-direction: column; width: 42vw; text-align: left;">
-                    <h2 style="font-size: 2vw; padding: 0.1vw; margin: 0.1vw;">Thrust vector control for model rockets.</h2>
-                    <p style="flex-grow: 0.8; display: flex; align-items: center; justify-content: center; margin: 0; font-size: 1.5vw;">
-                        Since December 2020, I have been designing and building Thrust Vector Control (TVC) systems for model rockets. The rockets estimate their position, velocity, and orientation with a combination of orientation filters and kalman filters that fuse GPS, Gyro, Accelerometer, and Magnetometer sensors to minimize error and account for sensor bias in flight. The rockets are stabilized with a custom TVC mount and use full state feedback in combination with algorithms to calculate and compensate for mechanical misalignment in flight.
-                    </p>
-                </div>
+    <!-- Work Section -->
+    <div id="work">
+        <h1 style="padding:0; font-size: 5vw; text-align:center; width:100%;">Work Experience</h1>
+        <div class="project-grid">
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
-                    <div>
-                        <img src="img/callisto-launch.gif" style="width: 100%; height: auto; border-radius: 1vw;">
-                        <h2 style="margin: 0; padding: 0%; font-size: 2vw;">Orientation control demonstration flight</h2>  
+            <!-- Custom Litt -->
+            <div class="project-card" data-project="custom-litt">
+                <button class="project-toggle" aria-expanded="false">
+                    <img src="img/work/custom-litt/ellipse-pattern.gif" alt="Custom Litt">
+                    <div class="project-summary">
+                        <h1>Custom Litt</h1>
+                        <h3>Music reactive lighting solutions for DJs and live performers.</h3>
                     </div>
-                    <div>
-                        <img src="img/europa_closeup.JPG" style="width: 100%; height: auto; border-radius: 1vw;">
-                        <h2 style="margin: 0; padding: 0%; font-size: 2vw;">A close-up of the Europa flight computer</h2>  
-                    </div>
-                    <div>
-                        <img src="img/avionics_wireframe_crop.PNG" style="width: 100%; height: auto; border-radius: 1vw;">
-                        <h2 style="margin: 0; padding: 0%; font-size: 2vw;">Avionics and control stack rendering</h2>  
-                    </div>
-                    <div>
-                        <img src="img/europa-launch.gif" style="width: 100%; height: auto; border-radius: 1vw;">
-                        <h2 style="margin: 0; padding: 0%; font-size: 2vw;">Position control demonstration flight</h2>  
+                </button>
+                <div class="project-details" hidden>
+                    <p>Since January 2024, I have been working as an embedded systems engineer at Custom Litt. I designed and built a bluetooth low energy (BLE) and WiFi enabled music reactive display for DJs and live performers. I programmed, tested, and deployed a real-time graphics rendering pipeline using C/C++ that outperformed the company’s previous solution by a factor of 4 in speed benchmarks. I also integrated a parallelized audio processing to enable music reactivity using fast fourier transforms. I am currently working on refining our Over The Air (OTA) update service using HTTPS and web servers implemented in C. I have played a critical role in the complete design process of Custom Litt’s Pixlpro product, starting at the conceptual design phase and leading development of firmware, hardware, and infrastructure, all the way through to deployment and production support.</p>
+                    <div class="gallery split">
+                        <figure class="left top">
+                            <img src="img/work/custom-litt/dj-khaled.jpg" alt="DJ Khaled performing with a Custom Litt display">
+                            <figcaption>DJ Khaled performing with a Custom Litt display</figcaption>
+                        </figure>
+
+                        <figure class="left bottom">
+                            <img src="img/work/custom-litt/bandgap.png" alt="Bandgap display">
+                            <figcaption>Bandgap display</figcaption>
+                        </figure>
+
+                        <figure class="right">
+                            <img src="img/work/custom-litt/drum-light.jpg" alt="Drum light display">
+                            <figcaption>Drum light display</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="project">
-            <div style="display: flex; align-items: left;">
-                <div style="display: flex; flex-direction: column; width: 42vw; text-align: left;">
-                    <h2 style="font-size: 2vw; padding: 0.1vw; margin: 0.1vw;">Rocket simulation and control software</h2>
-                    <p style="flex-grow: 0.8; display: flex; align-items: center; justify-content: center; margin: 0; font-size: 1.1vw;">
-                        In order to test and fly my rockets, I needed to simulate them! I wrote several iterations of rocket simulation software, originally only simulating 2 axes but then moving on to full 6DOF simulation. The simulation accounts for aerodynamic effects from the rocket as well as any fins or drag breaks that can be deployed during flight. This simulation was eventually able to match real-world flights enough to be used for development of new control algorithms to improve the performance of my rockets. With these powerful simulation tools, I was able to create my own landing burn guidance algorithm called G-FIELD (Guidance for Fixed Impulse Efficient Landing Diverts) that I am currently working on implementing on a physical rocket!
-                    </p>
-                </div>
-                <div style="display: table-column; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
-                    <div>
-                        <img src="img/landing_sim_clip.gif" style="width: 90%; border-radius: 1vw;">
-                        <h2 style="margin: 0; padding: 0%; font-size: 2vw;">3D Rendering of a landing simulation</h2>  
+            <!-- Forged Motus -->
+            <div class="project-card" data-project="forged-motus">
+                <button class="project-toggle" aria-expanded="false">
+                    <img src="img/work/forged-motus/ForgedMotus-proto-one.png" alt="Forged Motus">
+                    <div class="project-summary">
+                        <h1>Forged Motus</h1>
+                        <h3>Embedded motor controls engineering and PCB design for advanced GaNFET motor drivers.</h3>
                     </div>
-                                    
+                </button>
+                <div class="project-details" hidden>
+                    <p>Starting in the spring of 2025, I joined Forged Motus as one of the first members and lead embedded systems engineer. My work has been focused primarily on PCB design as the company works through its initial hardware and electrical design of its first product, Proto One. I have been primarily responsible for the design and verification of our digital control circuitry, including a high performance STM32G series microcontroller and supporting circuitry. I also review all high power switching circuitry and have been the main designer of our PCB layouts. Currently I am testing and verifying our first prototype motor driver and developing preliminary software systems for high voltage responsive motor control in C/C++.</p>
+                    <div class="gallery">
+                        <figure>
+                            <img src="img/work/forged-motus/proto-one-routing.png" alt="Proto One routing">
+                            <figcaption>Proto One routing</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/work/forged-motus/proto-one.jpg" alt="Proto One's back side">
+                            <figcaption>Proto One's back side</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/work/forged-motus/proto-one-digital-side.png" alt="Proto one digital control wiring">
+                            <figcaption>The wiring mess that is part of the control circuit</figcaption>
+                        </figure>
+                        
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="project">
-            <div style="display: flex; align-items: left;">
-                <div style="display: flex; flex-direction: column; width: 42vw; text-align: left;">
-                    <h2 style="font-size: 2vw; padding: 0.1vw; margin: 0.1vw;">Active canard control on high power rockets</h2>
-                    <p style="flex-grow: 0.8; display: flex; align-items: center; justify-content: center; margin: 0; font-size: 1.25vw;">
-                        Over the course of about ten months back in 2022, I designed an actively stabilized high power rocket with some friends named Local Rocket 1. This rocket flew on an H or I impulse rocket motor to around 1,000 feet and had active roll control from a pair of canards at the front of the vehicle. I was responsible for designing, building, testing, and programming the avionics system including Navigation, parachute deployment, and aiding in the control systems development. I designed a custom flight computer named Callisto to fly the rocket and developed a custom Real-time operating system to manage the computer's resources. The rocket used an asynchronous kalman filter to determine its position and velocity and was able to provide accurate velocity estimates even in the event of GPS signal loss.
-                    </p>
-                </div>
-                <div style="display: table-column; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
-                        <div>
-                            <img src="img/LR1LaunchPad.gif" style="width: 100%; height: auto; border-radius: 1vw;">
-                            <h2 style="margin: 0; padding: 0%; font-size: 2vw;">Footage of LR1 takeoff</h2>  
-                        </div>
-                        <div>
-                            <img src="img/LR1-launch-pad.JPG" style="width: 100%; height: auto; border-radius: 1vw;">
-                            <h2 style="margin: 0; padding: 0%; font-size: 2vw;">LR1 on the launchpad for its second flight</h2>  
-                        </div>
-                        <div>
-                            <img src="img/LR1Avionics.JPG" style="width: 100%; height: auto; border-radius: 1vw;">
-                            <h2 style="margin: 0; padding: 0%; font-size: 2vw;">LR1 avionics stack before integration</h2>  
-                        </div>
-                        <div>
-                            <img src="img/LR1OnBoard.gif" style="width: 100%; height: auto; border-radius: 1vw;">
-                            <h2 style="margin: 0; padding: 0%; font-size: 2vw;">Onboard footage of roll damping in flight</h2>  
-                        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects">
+        <h1 style="padding:0; font-size: 5vw; text-align:center; width:100%;">Projects</h1>
+        <div class="project-grid">
+
+            <!-- TVC Rockets -->
+            <div class="project-card" data-project="tvc">
+                <button class="project-toggle" aria-expanded="false">
+                    <img src="img/projects/tvc/europa-launch.gif" alt="TVC rocket launch">
+                    <div class="project-summary">
+                        <h1>Thrust Vector Control Rockets</h1>
+                        <h3>Custom model rockets with onboard state estimation and active TVC.</h3>
                     </div>
-                                    
+                </button>
+                <div class="project-details" hidden>
+                    <p>Since December 2020 I have designed and built multiple thrust vector control (TVC) systems for model rockets. They estimate position, velocity, and attitude using fused GPS, gyroscope, accelerometer, and magnetometer data via orientation and Kalman filters to reduce bias and noise. A custom TVC mount with full‑state feedback plus in‑flight misalignment compensation stabilizes the vehicle.</p>
+                    <div class="gallery">
+                        <figure>
+                            <img src="img/projects/tvc/europa_closeup.JPG" alt="Europa flight computer close-up">
+                            <figcaption>Europa flight computer</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/projects/tvc/avionics_wireframe_crop.PNG" alt="Avionics stack rendering">
+                            <figcaption>Avionics stack rendering</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/projects/tvc/callisto-launch.gif" alt="Position control demo flight">
+                            <figcaption>Position control demo</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="project">
-            <div style="display: flex; align-items: left;">
-                <div style="display: flex; flex-direction: column; width: 42vw; text-align: left;">
-                    <h2 style="font-size: 2vw; padding: 0.1vw; margin: 0.1vw;">PCB Design</h2>
-                    <p style="flex-grow: 0.8; display: flex; align-items: center; justify-content: center; margin: 0; font-size: 1.5vw;">
-                        I have designed six iterations of rocket flight computers on PCBs over the past four years, and have progressed from using simple breakout boards to fully custom surface mount PCBs. Since designing flight computers for my rockets I have made several PCBs for various clubs at my university, including a flight computer for the UMASS Rocket team. I am currently designing power management and distribution boards for satellites in the UMASS CubeSat team.
-                    </p>
-                </div>
-                <div style="display: table-column; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1vw; width: 50vw;">
-                        <div>
-                            <img src="img/hyperion-stack.png" style="width: 100%; height: auto; border-radius: 1vw;">
-                            <h2 style="margin: 0; padding: 0%; font-size: 2vw;">Rendering of the Hyperion avionics system</h2>  
-                        </div>
-                        <div>
-                            <img src="img/MUFFY.jpg" style="width: 100%; height: auto; border-radius: 1vw;">
-                            <h2 style="margin: 0; padding: 0%; font-size: 2vw;">UMASS Rocket Team flight computer</h2>  
-                        </div>
+            <!-- Simulation / Guidance -->
+            <div class="project-card" data-project="simulation">
+                <button class="project-toggle" aria-expanded="false">
+                    <img src="img/projects/sim/landing_sim_clip.gif" alt="3D landing sim">
+                    <div class="project-summary">
+                        <h1>Rocket Simulation & Guidance</h1>
+                        <h3>Custom 6DOF simulation and landing burn guidance (G-FIELD).</h3>
                     </div>
-                                    
+                </button>
+                <div class="project-details" hidden>
+                    <p>I built iterative rocket simulators evolving from 2-axis to full 6DOF models including aerodynamics, deployable fins, and drag brakes. Accuracy enabled algorithm development for new control strategies. Created a landing burn guidance algorithm (G‑FIELD: Guidance for Fixed Impulse Efficient Landing Diverts) now being implemented on hardware.</p>
                 </div>
             </div>
-        </div>
 
+            <!-- Active Canards -->
+            <div class="project-card" data-project="canards">
+                <button class="project-toggle" aria-expanded="false">
+                    <img src="img/projects/lr1/LR1LaunchPad.gif" alt="LR1 takeoff">
+                    <div class="project-summary">
+                        <h1>Active Canard Control</h1>
+                        <h3>High power rocket with active roll damping via canards.</h3>
+                    </div>
+                </button>
+                <div class="project-details" hidden>
+                    <p>In 2022 I helped design Local Rocket 1 (H/I impulse, ~1000 ft). I handled avionics: navigation, deployment, and control support. Built the Callisto flight computer plus a custom RTOS. An asynchronous Kalman filter provided robust velocity estimates even with GPS dropout while canards actively damped roll.</p>
+                    <div class="gallery">
+                        <figure>
+                            <img src="img/projects/lr1/LR1-launch-pad.JPG" alt="LR1 on launch pad">
+                            <figcaption>LR1 pre-launch</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/projects/lr1/LR1Avionics.JPG" alt="LR1 avionics stack">
+                            <figcaption>Avionics stack</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/projects/lr1/LR1OnBoard.gif" alt="Onboard roll damping">
+                            <figcaption>Onboard roll damping</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PCB Design -->
+            <div class="project-card" data-project="pcb">
+                <button class="project-toggle" aria-expanded="false">
+                    <img src="img/projects/pcbs/hyperion-routing.png" alt="Hyperion avionics rendering">
+                    <div class="project-summary">
+                        <h1>PCB Design</h1>
+                        <h3>Multiple flight computers and university satellite power boards.</h3>
+                    </div>
+                </button>
+                <div class="project-details" hidden>
+                    <p>I have produced six flight computer PCB iterations progressing to fully custom SMT designs. Additional boards include a UMASS Rocket Team flight computer and power management / distribution systems for CubeSat projects.</p>
+                    <div class="gallery">
+                        <figure>
+                            <img src="img/projects/pcbs/bandgap-module.png" alt="Bandgap Module (CustomLitt)">
+                            <figcaption>The Bandgap Module (CustomLitt)</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/projects/pcbs/hyperion-stack.png" alt="Hyperion Flight Computer stack">
+                            <figcaption>The Hyperion Flight Computer stack</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/projects/pcbs/UMASS-Cubesat-rpi-PMAD-board_view0.png" alt="UMASS CubeSat power board">
+                            <figcaption>UMASS CubeSat power delivery board</figcaption>
+
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <script src="generated/script.js"></script>
 </body>
 </html>
-

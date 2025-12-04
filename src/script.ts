@@ -1,4 +1,3 @@
-
 const headerText: String = "Cameron Kullberg";
 
 function updateText(newText: String, docID: String, speed: Number) {
@@ -56,6 +55,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     updateText("Cameron Kullberg", 'displayText0', 120);
-    updateText("Embedded Systems Engineer at CustomLitt, Sophmore Computer Engineering major at UMASS Amherst, Amateur Rocketry Enthusaist.", 'displayText1', 50);
-    
+    updateText("Embedded Systems Engineer at Custom Litt, Junior Computer Engineering major at UMASS Amherst, Amateur Rocketry Enthusiast.", 'displayText1', 50);
+
+    resetGifAnimations();
+    initProjectCards();
 });
+
+function resetGifAnimations() {
+    const gifs = document.querySelectorAll<HTMLImageElement>('img[src$=".gif"], img[src$=".GIF"]');
+    gifs.forEach(img => {
+        const src = img.getAttribute('src');
+        if (!src) return;
+
+        // Strip any existing cache-buster
+        const [base, query] = src.split('?');
+        const params = new URLSearchParams(query || '');
+        params.set('t', Date.now().toString());
+        img.src = `${base}?${params.toString()}`;
+    });
+}
+
+function initProjectCards() {
+    const cards = document.querySelectorAll<HTMLElement>('.project-card');
+    cards.forEach(card => {
+        const toggle = card.querySelector<HTMLButtonElement>('.project-toggle');
+        const details = card.querySelector<HTMLElement>('.project-details');
+        if (!toggle || !details) return;
+
+        // Ensure ARIA initial
+        toggle.setAttribute('aria-expanded', 'false');
+        details.setAttribute('role', 'region');
+
+        toggle.addEventListener('click', () => {
+            const expanded = card.classList.toggle('expanded');
+            toggle.setAttribute('aria-expanded', expanded.toString());
+            if (expanded) {
+                details.hidden = false;
+                // Let CSS transition handle
+            } else {
+                // Allow transition then hide
+                const onEnd = () => {
+                    if (!card.classList.contains('expanded')) details.hidden = true;
+                    details.removeEventListener('transitionend', onEnd);
+                };
+                details.addEventListener('transitionend', onEnd);
+            }
+        });
+
+        // Keyboard toggle with Enter/Space is already handled by button element
+    });
+}
